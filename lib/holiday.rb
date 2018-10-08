@@ -66,6 +66,7 @@ def all_supplies_in_holidays(holiday_hash)
         inkey = ((inkey.to_s).capitalize).sub("_", " ")
       else
         inkey = (inkey.to_s).capitalize
+      end
       array = inval.join(", ")
       puts "  " + inkey + ": " + array
     end
