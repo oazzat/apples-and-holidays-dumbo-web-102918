@@ -63,9 +63,9 @@ def all_supplies_in_holidays(holiday_hash)
     puts (key.to_s).capitalize + ":"
     val.each do |inkey,inval|
       if (inkey.to_s).include?("_")
-        inkey = ((inkey.to_s).capitalize).split("_")
-        inkey[1].capitalize
-        inkey.join(" ")
+        keyarray = ((inkey.to_s).capitalize).split("_")
+        keyarray[1].capitalize
+        inkey = keyarray.join(" ")
       else
         inkey = (inkey.to_s).capitalize
       end
