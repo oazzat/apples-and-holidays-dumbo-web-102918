@@ -65,6 +65,9 @@ def all_supplies_in_holidays(holiday_hash)
       if (inkey.to_s).include?("_")
         keyarray = ((inkey.to_s).capitalize).split("_")
         keyarray[1] = keyarray[1].capitalize
+        if keyarray[2] != nil
+          keyarray[2] = keyarray[2].capitalize
+        end
         inkey = keyarray.join(" ")
       else
         inkey = (inkey.to_s).capitalize
